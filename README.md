@@ -101,14 +101,11 @@ AI Applications     ████████████░░░░░░░░
 
 ## GitHub Activity
 
-<div align="center">
+- 查看我的[公开仓库](https://github.com/OLRainM?tab=repositories)
+- 查看我的[贡献记录](https://github.com/OLRainM)
+- 查看我的[项目动态](https://github.com/OLRainM?tab=activity)
 
-<img height="165" src="https://github-readme-stats.vercel.app/api?username=OLRainM&show_icons=true&theme=github_dark&hide_border=true&rank_icon=github" alt="OLRainM's GitHub stats" />
-<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=OLRainM&layout=compact&theme=github_dark&hide_border=true&langs_count=6" alt="Most used languages" />
-
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=OLRainM&theme=github-compact&hide_border=true&area=true" width="95%" alt="Contribution graph" />
-
-</div>
+> GitHub 主页下方会自动展示贡献热力图；统计卡片依赖第三方服务，服务不稳定时会出现破图，因此这里不再嵌入外部统计图片。
 
 ## Contact
 
