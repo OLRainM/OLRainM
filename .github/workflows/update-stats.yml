@@ -1,0 +1,44 @@
+name: Update GitHub Stats
+
+on:
+  schedule:
+    - cron: "17 16 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/generate_github_stats.py"
+      - ".github/workflows/update-stats.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  update-stats:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Generate stats cards
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_USERNAME: OLRainM
+        run: python scripts/generate_github_stats.py
+
+      - name: Commit updated cards
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/github-stats.svg assets/github-langs.svg
+          if git diff --cached --quiet; then
+            echo "No stats changes"
+          else
+            git commit -m "chore: update GitHub stats cards"
+            git push
+          fi
